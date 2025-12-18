@@ -68,7 +68,7 @@ bool handleInputEvent(const SDL_Event& event)
         break;
 
     case SDL_CONTROLLERDEVICEADDED:
-        if (xbox360_mode == true || config_mode == true) {
+        if (xbox360_mode == true) {
             SDL_GameControllerOpen(event.cdevice.which);
 
             SDL_GameController* controller = SDL_GameControllerOpen(event.cdevice.which);
